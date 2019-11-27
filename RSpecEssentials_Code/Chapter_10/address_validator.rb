@@ -2,7 +2,6 @@ module AddressValidator
   FIELD_NAMES = [:street, :city, :region, :postal_code, :country]
   VALID_VALUE = /^[A-Za-z0-9\.\# ]+$/
   class << self
-    
     def valid?(o)
       normalized = parse(o)
       FIELD_NAMES.all? do |k|
